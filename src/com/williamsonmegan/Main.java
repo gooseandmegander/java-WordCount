@@ -18,8 +18,9 @@ public class Main {
         // create HashMap
         HashMap<String, Integer> wordHashMap = new HashMap<String, Integer>();
 
+        // add word=frequency
         while (scan.hasNext()) {
-            String word = scan.next();
+            String word = scan.next().toLowerCase();
             if (wordHashMap.containsKey(word)) {
                 wordHashMap.put(word, wordHashMap.get(word) + 1);
             } else {
@@ -27,8 +28,6 @@ public class Main {
             }
         }
 
-
-//        scan.close();
-        System.out.println(wordHashMap);
+        
     }
 }
